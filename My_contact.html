@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>My Contact</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            background: #0b0904;
+            justify-content: center;
+            align-items: center;
+        }
+        .contact{
+            position: relative;
+            font-family: sans-serif;
+            color: rgb(78, 112, 235);
+            font-size: 2em;
+            letter-spacing: 4px;
+            overflow: hidden;
+            background:  linear-gradient(90deg,#000 ,#fff ,#000);
+            background-repeat: no-repeat;
+            background-size: 88%;
+            animation: animate 5s linear infinite;  
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .contact1{  
+            position: relative;
+            font-family: sans-serif;
+            color: rgb(78, 112, 235);
+            font-size: 2em;
+            letter-spacing: 4px;
+            overflow: hidden;
+            background:  linear-gradient(90deg,#000 ,#fff ,#000);
+            background-repeat: no-repeat;
+            background-size: 88%;
+            animation: animate 5s linear infinite;  
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .d1{
+            position: relative;
+            font-family: sans-serif;
+            font-size: 7em;
+            letter-spacing: 4px;
+            overflow: hidden;
+            background:  linear-gradient(90deg,#000 ,#fff ,#000);
+            background-repeat: no-repeat;
+            background-size: 88%;
+            animation: animate1 5s linear infinite;  
+            -webkit-background-clip: text;
+        }
+        @keyframes animate {
+            0%{
+                background-position: -500%;
+            }
+            100%{
+                background-position: -40%;
+            }
+        }
+        @keyframes animate1 {
+            0%{
+                background-position: -500%;
+            }
+            100%{
+                background-position: -50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="d">
+        <h1 class="d1" style="background-image: url('https://png.pngtree.com/background/20210706/original/pngtree-scenic-nature-background-picture-image_259993.jpg') ;text-align: centers;">CONTACT_DETAILS..</h1>
+        <ul>
+            <li class="contact">
+                <a href="https://www.linkedin.com/in/aditi-desai-588107239"><i
+                        class='bx bxl-linkedin-square'></i>LinkedIn</a></li>
+                        <br>
+            <li class="contact1">
+                <i class='bx bxl-gmail'></i>: aditidesai892@gmail.com
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
