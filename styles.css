@@ -1,0 +1,254 @@
+/* General Body and Background Settings */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url('C://Users//Admin//Desktop//web//digital//keyboard.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #585555;
+}
+
+#toggleTheme {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#toggleTheme:hover {
+    background-color: #555;
+    color: #f3e8ff;
+}
+
+body.light-mode #toggleTheme {
+    background-color: #ddd;
+    color: #333;
+}
+
+body.light-mode #toggleTheme:hover {
+    background-color: #bbb;
+    color: #000;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    background-image: url('C://Users//Admin//Desktop//web//digital//keyboard.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #e0e0e0;
+}
+
+/* Light Mode */
+body.light-mode {
+    background-color: #f3f4f6;
+    background-image: url('C://Users//Admin//Desktop//web//digital//keyboard.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+}
+
+/* Sidebar Menu */
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 80px;
+    overflow: hidden;
+    transition: width 0.3s ease, background-color 0.3s ease;
+    box-shadow: 2px 0 5px rgba(208, 188, 188, 0.3);
+}
+
+/* Dark Mode Menu Bar */
+body.dark-mode nav {
+    background-color: rgba(30, 30, 30, 0.9);
+}
+
+/* Light Mode Menu Bar */
+body.light-mode nav {
+    background-color: rgba(201, 182, 182, 0.9);
+    color: #000;
+}
+
+nav:hover {
+    width: 250px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav ul li {
+    width: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f3e8ff;
+    font-size: 1.2em;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+nav ul li a i {
+    font-size: 2em;
+    margin-right: 15px;
+}
+
+/* Show full name on hover */
+nav ul li a span {
+    display: none; /* Hide text initially */
+    opacity: 0; /* Hide text on load */
+    transition: opacity 0.3s ease; /* Smooth fade effect */
+}
+
+nav:hover ul li a span {
+    display: inline-block; /* Display text when hovered */
+    opacity: 1; /* Make text visible */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Content Area */
+.content {
+    margin-left: 80px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+nav:hover~.content {
+    margin-left: 250px;
+}
+
+/* Main Content Sections */
+section {
+    height: auto;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+
+    position: relative;
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    animation: popup 0.6s ease-out forwards;
+}
+
+/* Popup Animation */
+@keyframes popup {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.subtitle {
+    font-size: 1.5em;
+    color: #ccc;
+}
+
+/* Skills Section */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between; /* Ensure columns are aligned properly */
+}
+
+.skills div {
+    background-color: rgba(19, 18, 18, 0.416);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(103, 100, 100, 0.2);
+    width: calc(33% - 40px);
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .skills div {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .skills div {
+        width: 100%;
+    }
+}
+
+/* Contact Section */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.contact-list li {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.contact-list li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+/* Responsive Navigation */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+}

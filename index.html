@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dark-mode">
+    <!-- Sidebar -->
+    <nav>
+        <button id="toggleTheme">Toggle Dark Mode</button>
+        <ul>
+            <li><a href="#portfolio"><i class="bx bxs-home"></i> <span>Portfolio</span></a></li>
+            <li><a href="#about"><i class="bx bxs-user"></i> <span>About Me</span></a></li>
+            <li><a href="#skills"><i class="bx bxs-cog"></i> <span>Skills</span></a></li>
+            <li><a href="#projects"><i class="bx bxs-folder"></i> <span>Projects</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <section id="portfolio">
+            <h1>ADITI DESAI</h1>
+            <p class="subtitle" style="text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    animation: popup 0.8s ease-out forwards;">WEB & ML DEVELOPER</p>
+        </section>
+
+        <section id="about" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <!-- Title -->
+            <h1 style="margin-bottom: 20px;">About Me</h1>
+
+            <!-- Content in Two Columns -->
+            <div style="display: flex; gap: 10px; width: 100%; max-width: 1200px; text-align: left;">
+                <!-- Left: Profile Picture -->
+                <div class="profile-pic" style="flex: 1; text-align: center; min-height: 80px;">
+                    <img src="img1.jpg" alt="Aditi Desai"
+                        style="max-width: 80%; min-height: 80%; height: 90%; object-fit: cover; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);">
+                </div>
+
+                <!-- Right: About Me Content -->
+                <div class="about-content"
+                    style="flex: 2; text-align: left; background-color: rgba(8, 8, 8, 0.7); padding: 8px; border-radius: 10px; margin-bottom:40px;">
+                    <p style="font-size: 0.99em;"> <!-- Decreased font size -->
+                        I am a final-year B.E. student specializing in Artificial Intelligence and Data Science,
+                        currently maintaining a CGPA of 8.7. With a deep passion for machine learning, web development,
+                        and developing innovative AI-driven solutions, I am always keen on expanding my knowledge and
+                        honing my skills. I possess a naturally curious personality that drives me to continuously
+                        explore new technologies and solve complex problems.
+                        <br>
+                        Throughout my academic journey, I have completed my schooling at S.N.B.P International School
+                        and my junior college at D.Y. Patil Art, Science, and Commerce Jr. College, Akurdi. I am
+                        currently pursuing my graduation at D.Y. Patil College of Engineering, Akurdi, Pune. Alongside
+                        my studies, I have actively participated in co-curricular activities, including events like
+                        BroCode and CodeCombat Technovate.
+                        <br>
+                        In addition to my academic pursuits, I have gained valuable work experience through internships
+                        that have allowed me to apply my knowledge in real-world settings and collaborate with industry
+                        professionals.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="skills">
+            <h1>Skills</h1>
+            <div class="skills">
+                <div>
+                    <h3>Programming languages</h3>
+                    <p class="skill">
+                        Python, Java, JavaScript, HTML, CSS, ReactJS
+                    </p>
+                </div>
+                <div>
+                    <h3>Skill set</h3>
+                    <p class="skill">
+                        Machine Learning, Deep Learning
+                    </p>
+                </div>
+                <div>
+                    <h3>Tools</h3>
+                    <p class="skill" >
+                        TensorFlow, Git, Jupyter, VS Code
+                    </p>
+                </div>
+                <div style="margin: 0 auto;"> <!-- Center-aligned the third column -->
+                    <h3>Soft Skills</h3>
+                    <p class="skill" >
+                        Communication, Problem-Solving, Teamwork
+                    </p>
+                </div>
+            </div>
+            <!-- Container for certificate preview -->
+            <div class="cert-preview"></div>
+        </section>
+        
+        <section id="projects" style="background-color: #f7f3f32f; padding: 20px;">
+            <h1 style="text-align: center; color: #ffffff;">Projects</h1>
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px;">
+                <!-- Left Block (Image Captioning) -->
+                <div style="width: 30%; background-color: #ffffff; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-bottom: 20px;">
+                    <h3 style="text-align: center; color: #333333;">Image Captioning</h3>
+                    <img src="C:\Users\Admin\Desktop\web\digital\img_cap.jpg" alt="Image Captioning Project" style="width: 90%; height: auto; border-radius: 5px; margin: 0 auto; display: block;">
+                    <p style="text-align: justify; margin-top: 10px; color: #333333;">
+                        A project leveraging deep learning models to generate captions for images automatically.
+                        It uses Convolutional Neural Networks (CNNs) for feature extraction and Recurrent Neural
+                        Networks (RNNs) for generating descriptions.
+                        Technologies used: Python, TensorFlow, Keras, and OpenCV.
+                    </p>
+                    <a href="https://github.com/githubcodingjoiner/Image_Captioning" style="text-decoration: none; color: #007BFF; display: block; text-align: center; margin-top: 10px;">GitHub Link</a>
+                </div>
+        
+                <!-- Center Block (MNIST Digit Classification) -->
+                <div style="width: 30%; background-color: #ffffff; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-bottom: 20px;">
+                    <h3 style="text-align: center; color: #333333;">MNIST Digit Classification</h3>
+                    <img src="C:\Users\Admin\Desktop\web\digital\mnist_img.jpg" alt="MNIST Digit Classification Project" style="width: 90%; height: auto; border-radius: 5px; margin: 0 auto; display: block;">
+                    <p style="text-align: justify; margin-top: 10px; color: #333333;">
+                        A project designed to classify handwritten digits from the MNIST dataset using neural networks.
+                        It implements a feedforward neural network with softmax activation for digit recognition.
+                        Technologies used: Python, TensorFlow, NumPy, and Matplotlib.
+                    </p>
+                    <a href="https://github.com/githubcodingjoiner/MNIST_Digit_Classification" style="text-decoration: none; color: #007BFF; display: block; text-align: center; margin-top: 10px;">GitHub Link</a>
+                </div>
+        
+                <!-- Right Block (Emotion Detection) -->
+                <div style="width: 30%; background-color: #ffffff; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-bottom: 20px;">
+                    <h3 style="text-align: center; color: #333333;">EMOTION DETECTION</h3>
+                    <img src="C:\Users\Admin\Desktop\web\digital\Emo_img.jpg" alt="Emotion Detection Project" style="width: 90%; height: auto; border-radius: 5px; margin: 0 auto; display: block;">
+                    <p style="text-align: justify; margin-top: 10px; color: #333333;">
+                        Emotion Detection is an innovative project aimed at identifying and categorizing human emotions
+                        such as happiness, sadness, anger, and neutrality from facial expressions or textual input.
+                        By leveraging advanced technologies such as Python for development, TensorFlow and Keras for
+                        deep learning, OpenCV for image processing, and NumPy for data manipulation, this project
+                        showcases the power of Artificial Intelligence in analyzing emotions.
+                        The application of Convolutional Neural Networks (CNNs) enables precise facial feature
+                        extraction, while Natural Language Processing (NLP) techniques handle emotion recognition from
+                        text, making this a versatile solution for modern AI-driven applications.
+                    </p>
+                    <a href="https://github.com/githubcodingjoiner/Emotion_Detection" style="text-decoration: none; color: #007BFF; display: block; text-align: center; margin-top: 10px;">GitHub Link</a>
+                </div>
+            </div>
+        </section>
+                
+        
+    </div>
+    <footer style="color: #ffffff; padding: 20px; text-align: center;">
+    <ul style="list-style: none; padding: 0; margin: 10px 0; display: flex; justify-content: center; gap: 20px;">
+        <li><a href="mailto:aditidesai892@gmail.com" style="color: #ffffff; text-decoration: none;">
+            <i class="fas fa-envelope" style="font-size: 30px;"></i> <!-- Email Icon -->
+        </a></li>
+        <li><a href="https://www.linkedin.com/in/aditi-desai-588107239/" style="color: #ffffff; text-decoration: none;">
+            <i class="fab fa-linkedin" style="font-size: 30px;"></i> <!-- LinkedIn Icon -->
+        </a></li>
+        <li><a href="https://github.com/githubcodingjoiner" style="color: #ffffff; text-decoration: none;">
+            <i class="fab fa-github" style="font-size: 30px;"></i> <!-- GitHub Icon -->
+        </a></li>
+        <li><a href="https://www.instagram.com/aditidesai/" style="color: #ffffff; text-decoration: none;">
+            <i class="fab fa-instagram" style="font-size: 30px;"></i> <!-- Instagram Icon -->
+        </a></li>
+    </ul>
+</footer>
+
+
+
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
