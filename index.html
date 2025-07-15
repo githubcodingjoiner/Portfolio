@@ -2,234 +2,304 @@
 <html>
 
 <head>
-	<title>Aditi | Portfolio</title>
-	<base href="/Portfolio/">
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <title>Aditi | Portfolio</title>
+  <base href="/Portfolio/">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-	<style>
-		#skillhub-projects .image.fit img,
-		#skillhub-certifications .image.fit img {
-			width: 100%;
-			aspect-ratio: 1 / 1;
-			object-fit: contain;
-			display: block;
-			background-color: #fff;
-			padding: 10px;
-			border-radius: 10px;
-			margin-bottom: 15px;
-		}
+  <style>
+    #skillhub-projects .image.fit img,
+    #skillhub-certifications .image.fit img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      display: block;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
 
-		#bio {
-			background-color: #f5f7f7;
-			color: #080808;
-			padding: 60px 20px;
-			font-family: 'Segoe UI', sans-serif;
-		}
+    #bio {
+      background-color: #f5f7f7;
+      color: #080808;
+      padding: 60px 20px;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-		#bio h1, #bio h2, #bio h3 {
-			color: #2e5606;
-		}
+    #bio h1, #bio h2, #bio h3 {
+      color: #2e5606;
+    }
 
-		.card {
-			background-color: #eff3f3;
-			padding: 20px;
-			margin: 15px 0;
-			border-radius: 12px;
-			box-shadow: 0 0 10px rgba(180, 255, 0, 0.1);
-		}
+    .card {
+      background-color: #eff3f3;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(180, 255, 0, 0.1);
+    }
 
-		.date {
-			font-size: 0.85em;
-			color: #6b6565;
-			margin-bottom: 5px;
-		}
+    .date {
+      font-size: 0.85em;
+      color: #6b6565;
+      margin-bottom: 5px;
+    }
 
-		#domains {
-			background-color: #f9f9f9;
-			color: #1e1e1e;
-			padding: 60px 20px;
-			font-family: 'Segoe UI', sans-serif;
-			text-align: center;
-		}
+    #domains {
+      background-color: #f9f9f9;
+      color: #1e1e1e;
+      padding: 60px 20px;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+    }
 
-		.domain-cards {
-			display: flex;
-			justify-content: center;
-			flex-wrap: wrap;
-			gap: 30px;
-			margin-top: 40px;
-		}
+    .domain-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 40px;
+    }
 
-		.domain-card {
-			background-color: #ffffff;
-			width: 250px;
-			padding: 25px;
-			border-radius: 15px;
-			border: 1px solid #ddd;
-			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-			transition: transform 0.3s ease, box-shadow 0.3s ease;
-			opacity: 0;
-			transform: translateY(20px);
-		}
+    .domain-card {
+      background-color: #ffffff;
+      width: 250px;
+      padding: 25px;
+      border-radius: 15px;
+      border: 1px solid #ddd;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+    }
 
-		.domain-card:hover {
-			transform: translateY(-10px);
-			box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-		}
+    .domain-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
 
-		.domain-card.visible {
-			opacity: 1;
-			transform: translateY(0);
-		}
+    .domain-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-		.domain-card img {
-			width: 60px;
-			margin-bottom: 15px;
-			filter: grayscale(0.2) brightness(1.1);
-		}
+    .domain-card img {
+      width: 60px;
+      margin-bottom: 15px;
+      filter: grayscale(0.2) brightness(1.1);
+    }
 
-		#skillhub {
-			margin-top: 60px;
-			padding: 60px 20px;
-			margin-bottom: 100px;
-		}
-	</style>
+    #skillhub {
+      margin-top: 60px;
+      padding: 60px 20px;
+      margin-bottom: 100px;
+    }
+  </style>
 </head>
 
 <body class="is-preload home-bg" style="background-color: #2b2b48; color: #4b4848; font-family: 'Segoe UI', sans-serif; line-height: 1.6;">
-	<!-- Navigation -->
-	<nav id="main-menu" style="width:100%;background:rgba(25, 24, 24, 0.85);padding:1em 0;position:fixed;top:0;left:0;z-index:100;">
-		<ul style="display:flex;justify-content:center;gap:2em;list-style:none;margin:0;padding:0;">
-			<li><a href="#header" style="color:#fff;font-weight:bold;text-decoration:none;">Home</a></li>
-			<li><a href="#about" style="color:#fff;font-weight:bold;text-decoration:none;">About Me</a></li>
-			<li><a href="#skillhub" style="color:#fff;font-weight:bold;text-decoration:none;">Skill Hub</a></li>
-			<li><a href="#bio" style="color:#fff;font-weight:bold;text-decoration:none;">Bio</a></li>
-		</ul>
-	</nav>
-	<div style="height:70px;"></div>
 
-	<!-- Header -->
-	<section id="header">
-		<div class="inner" style="text-align:center;max-width:800px;margin:0 auto;padding:2em 1em;">
-			<h1 style="font: 4em sans-serif;">Hello, <br>I'm Aditi Desai<br></h1>
-			<p>Welcome to my Portfolio</p>
-			<ul class="actions special">
-				<li><a href="#about" class="button scrolly">About Me</a></li>
-			</ul>
-		</div>
-	</section>
+  <!-- Navigation -->
+  <nav id="main-menu" style="width:100%;background:rgba(25, 24, 24, 0.85);padding:1em 0;position:fixed;top:0;left:0;z-index:100;">
+    <ul style="display:flex;justify-content:center;gap:2em;list-style:none;margin:0;padding:0;">
+      <li><a href="#header" style="color:#fff;font-weight:bold;text-decoration:none;">Home</a></li>
+      <li><a href="#about" style="color:#fff;font-weight:bold;text-decoration:none;">About Me</a></li>
+      <li><a href="#skillhub" style="color:#fff;font-weight:bold;text-decoration:none;">Skill Hub</a></li>
+      <li><a href="#bio" style="color:#fff;font-weight:bold;text-decoration:none;">Bio</a></li>
+    </ul>
+  </nav>
+  <div style="height:70px;"></div>
 
-	<!-- About -->
-	<section id="about" class="main style1">
-		<div class="container">
-			<header class="major">
-				<h1><strong>About Me</strong></h1>
-			</header>
-			<div class="row gtr-150" style="align-items: center;">
-				<div class="col-8 col-12-medium">
-					<p><strong>'Machines learn patterns. I seek meaning'</strong><br><br>
-					I am a B.E. graduate in Artificial Intelligence and Data Science...<br>
-					(Current about content you already wrote here)</p>
-					<a href="https://drive.google.com/file/d/1b9W58rjeL-kryBb5PY7alHAhtexbNTbK/view?usp=sharing" target="_blank" class="resume-btn">View Resume</a>
-				</div>
-			</div>
-		</div>
-	</section>
+  <!-- Header -->
+  <section id="header">
+    <div class="inner" style="text-align:center;max-width:800px;margin:0 auto;padding:2em 1em;">
+      <h1 style="font-size: 3em; font-weight: 600;">Hello, <br>I'm Aditi Desai</h1>
+      <p>Welcome to my Portfolio</p>
+      <ul class="actions special">
+        <li><a href="#about" class="button scrolly">About Me</a></li>
+      </ul>
+    </div>
+  </section>
 
-	<!-- Skill Hub -->
-	<section id="skillhub" class="main style1 special" style="padding-top: 60px;">
-		<div class="container">
-			<header class="major">
-				<h1><strong>Skill Hub</strong></h1>
-			</header>
-			<div id="skillhub-tabs" style="display:flex;justify-content:center;gap:1em;margin-bottom:2em;">
-				<button class="skillhub-tab active" onclick="showSkillHubTab('projects')">Projects</button>
-				<button class="skillhub-tab" onclick="showSkillHubTab('certifications')">Certifications</button>
-				<button class="skillhub-tab" onclick="showSkillHubTab('publications')">Publications</button>
-			</div>
-			<div id="skillhub-content">
-				<!-- Add your panels: projects, certifications, publications here exactly as before -->
-				<!-- Omitted for brevity but you can copy-paste from your full version -->
-			</div>
-		</div>
-	</section>
+  <!-- About -->
+  <section id="about" class="main style1">
+    <div class="container">
+      <header class="major">
+        <h1><strong>About Me</strong></h1>
+      </header>
+      <div class="row gtr-150" style="align-items: center;">
+        <div class="col-8 col-12-medium">
+          <p><strong>'Machines learn patterns. I seek meaning'</strong><br><br>
+            I am a B.E. graduate in Artificial Intelligence and Data Science with a passion for transforming ideas into purposeful AI solutions...
+          </p>
+          <a href="https://drive.google.com/file/d/1b9W58rjeL-kryBb5PY7alHAhtexbNTbK/view?usp=sharing" target="_blank" class="resume-btn">View Resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-	<!-- Bio -->
-	<section id="bio" class="main style1">
-		<div class="container">
-			<header class="major">
-				<h1><strong>BIO</strong></h1>
-			</header>
-			<div class="row">
-				<!-- Education and Work Experience cards -->
-				<!-- Omitted for brevity — keep as-is from your existing code -->
-			</div>
-		</div>
-	</section>
+  <!-- Skill Hub -->
+  <section id="skillhub" class="main style1 special">
+    <div class="container">
+      <header class="major">
+        <h1><strong>Skill Hub</strong></h1>
+      </header>
 
-	<!-- Domains -->
-	<section id="domains" class="main style1">
-		<div class="container">
-			<header class="major">
-				<h2><strong>Domains</strong> I work with</h2>
-			</header>
-			<div class="domain-cards">
-				<div class="domain-card">
-					<img src="https://img.icons8.com/ios/100/artificial-intelligence.png" alt="ML">
-					<h3>Machine Learning & NLP</h3>
-				</div>
-				<div class="domain-card">
-					<img src="https://img.icons8.com/ios/100/code.png" alt="Full Stack">
-					<h3>Full-Stack Web Development</h3>
-				</div>
-				<div class="domain-card">
-					<img src="https://img.icons8.com/ios/100/robot-2--v1.png" alt="LLM">
-					<h3>LLM & Generative AI</h3>
-				</div>
-			</div>
-		</div>
-	</section>
+      <!-- Tabs -->
+      <div id="skillhub-tabs" style="display:flex;justify-content:center;gap:1em;margin-bottom:2em;">
+        <button class="skillhub-tab active" onclick="showSkillHubTab('projects')">Projects</button>
+        <button class="skillhub-tab" onclick="showSkillHubTab('certifications')">Certifications</button>
+        <button class="skillhub-tab" onclick="showSkillHubTab('publications')">Publications</button>
+      </div>
 
-	<!-- Footer -->
-	<section id="footer">
-		<ul class="icons">
-			<li><a href="mailto:aditidesai892@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-			<li><a href="https://www.linkedin.com/in/aditi-desai-588107239/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-			<li><a href="https://github.com/githubcodingjoiner" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-		</ul>
-	</section>
+      <!-- Content Panels -->
+      <div id="skillhub-content">
+        <!-- Projects -->
+        <div class="skillhub-panel" id="skillhub-projects">
+          <div class="row gtr-150">
+            <div class="col-4 col-12-medium">
+              <span class="image fit"><img src="stress_api.png" alt="Stress Analysis API Project" /></span>
+              <h2>Stress Analysis API</h2>
+              <p>Built full-stack app using ASP.NET Core and ML.NET for stress prediction and dynamic recommendations.</p>
+            </div>
+            <div class="col-4 col-12-medium">
+              <span class="image fit"><img src="twitter_sentiment.jpg" alt="Twitter Sentiment Analysis Project" /></span>
+              <h2>Twitter Sentiment Analysis</h2>
+              <p>Classified tweets using Python, visualized trends using Tableau pie/bar charts, and interpreted emotional distribution.</p>
+            </div>
+            <div class="col-4 col-12-medium">
+              <span class="image fit"><img src="neurospiritual_ai.png" alt="Neurospiritual AI Project" /></span>
+              <h2>Neurospiritual AI</h2>
+              <p>Semantic search system recommending Bhagavad Gita verses using FAISS + Mistral LLM embeddings.</p>
+            </div>
+          </div>
+        </div>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-	<script>
-		function showSkillHubTab(tab) {
-			document.querySelectorAll('.skillhub-tab').forEach(btn => btn.classList.remove('active'));
-			document.querySelectorAll('.skillhub-panel').forEach(panel => panel.style.display = 'none');
-			document.getElementById('skillhub-' + tab).style.display = '';
-			if (tab === 'projects') document.querySelectorAll('.skillhub-tab')[0].classList.add('active');
-			if (tab === 'certifications') document.querySelectorAll('.skillhub-tab')[1].classList.add('active');
-			if (tab === 'publications') document.querySelectorAll('.skillhub-tab')[2].classList.add('active');
-		}
+        <!-- Certifications -->
+        <div class="skillhub-panel" id="skillhub-certifications" style="display: none;">
+          <div class="row gtr-150 certification-grid">
+            <div class="col-4 col-12-medium certification-card">
+              <span class="image fit"><img src="ML_certificate.png" alt="ML Certificate" /></span>
+              <h3>IBM Machine Learning with Python</h3>
+              <p>July 2023</p>
+            </div>
+            <div class="col-4 col-12-medium certification-card">
+              <span class="image fit"><img src="Python_Hackerrank_certificate.png" alt="Python Certificate" /></span>
+              <h3>Python – HackerRank</h3>
+              <p>April 2024</p>
+            </div>
+            <div class="col-4 col-12-medium certification-card">
+              <span class="image fit"><img src="BI_certificate.png" alt="BI Certificate" /></span>
+              <h3>Business Intelligence – Infosys</h3>
+              <p>August 2024</p>
+            </div>
+          </div>
+        </div>
 
-		const observer = new IntersectionObserver(entries => {
-			entries.forEach(entry => {
-				if (entry.isIntersecting) {
-					entry.target.classList.add('visible');
-				}
-			});
-		});
-		document.querySelectorAll('.domain-card').forEach(card => {
-			observer.observe(card);
-		});
-	</script>
+        <!-- Publications -->
+        <div class="skillhub-panel" id="skillhub-publications" style="display: none;">
+          <div class="row gtr-150" style="justify-content: center;">
+            <div class="col-6 col-12-medium" style="text-align: center; background-color: #ececf5; padding: 30px; border-radius: 12px;">
+              <span class="image fit" style="max-width: 180px; margin: 0 auto 20px;"><img src="btks_logo.png" alt="BTKS Logo" /></span>
+              <h2>Neurospiritual AI at BTKS 2025</h2>
+              <p>Accepted paper on Emotion-Aware Spiritual Guidance using NLP and Bhagavad Gita shlokas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Bio -->
+  <section id="bio" class="main style1">
+    <div class="container">
+      <header class="major"><h1><strong>BIO</strong></h1></header>
+      <div class="row">
+        <div class="col-6 col-12-medium">
+          <h2>Education</h2>
+          <div class="card">
+            <p class="date">2021 – Present</p>
+            <h3>B.E. Artificial Intelligence & Data Science</h3>
+            <p>Dr. D.Y. Patil COE, Pune – CGPA: 8.99</p>
+          </div>
+          <div class="card">
+            <p class="date">2019 – 2021</p>
+            <h3>HSC (PCM)</h3>
+            <p>D.Y. Patil Jr. College – 95%</p>
+          </div>
+          <div class="card">
+            <p class="date">2019</p>
+            <h3>CBSE (10th)</h3>
+            <p>SNBP School – 94.4%</p>
+          </div>
+        </div>
+        <div class="col-6 col-12-medium">
+          <h2>Work Experience</h2>
+          <div class="card">
+            <p class="date">Nov 2024 – May 2025</p>
+            <h3>Technical Trainee – Worldline</h3>
+            <p>CI/CD, Jenkins, GitLab integrations</p>
+          </div>
+          <div class="card">
+            <p class="date">Apr 2024 – Jul 2024</p>
+            <h3>Data Science Intern – DataAvengers</h3>
+            <p>EDA, ML Models, Excel + SQL</p>
+          </div>
+          <div class="card">
+            <p class="date">Jun 2023 – Oct 2023</p>
+            <h3>AI Ethics Intern – Z-Inspection</h3>
+            <p>Research on ethical AI in healthcare</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Domains -->
+  <section id="domains" class="main style1">
+    <div class="container">
+      <header class="major"><h2><strong>Domains</strong> I work with</h2></header>
+      <div class="domain-cards">
+        <div class="domain-card"><img src="https://img.icons8.com/ios/100/artificial-intelligence.png" alt="ML"><h3>Machine Learning & NLP</h3></div>
+        <div class="domain-card"><img src="https://img.icons8.com/ios/100/code.png" alt="Full Stack"><h3>Full-Stack Development</h3></div>
+        <div class="domain-card"><img src="https://img.icons8.com/ios/100/robot-2--v1.png" alt="LLM"><h3>LLM & Generative AI</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section id="footer">
+    <ul class="icons">
+      <li><a href="mailto:aditidesai892@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+      <li><a href="https://www.linkedin.com/in/aditi-desai-588107239/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+      <li><a href="https://github.com/githubcodingjoiner" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+    </ul>
+  </section>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    function showSkillHubTab(tab) {
+      document.querySelectorAll('.skillhub-tab').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.skillhub-panel').forEach(panel => panel.style.display = 'none');
+      document.getElementById('skillhub-' + tab).style.display = '';
+      document.querySelectorAll('.skillhub-tab')[['projects', 'certifications', 'publications'].indexOf(tab)].classList.add('active');
+    }
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+    document.querySelectorAll('.domain-card').forEach(card => observer.observe(card));
+  </script>
 </body>
 </html>
