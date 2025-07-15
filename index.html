@@ -1,0 +1,458 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Aditi | Portfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+	<style>
+		#skillhub-projects .image.fit img {
+			width: 100%;
+			aspect-ratio: 1 / 1;
+			/* Makes it perfectly square */
+			object-fit: contain;
+			/* No cropping — keeps full image visible */
+			display: block;
+			background-color: #fff;
+			/* Optional: give a consistent background */
+			padding: 10px;
+			/* Optional: prevent image from touching edges */
+			border-radius: 10px;
+			margin-bottom: 15px;
+		}
+
+
+		#skillhub-certifications .image.fit img {
+			width: 100%;
+			aspect-ratio: 1 / 1;
+			object-fit: contain;
+			display: block;
+			background-color: #fff;
+			padding: 10px;
+			border-radius: 10px;
+			margin-bottom: 15px;
+		}
+
+		/* Resume/Bio Section */
+		#bio {
+			background-color: #f5f7f7;
+			color: #080808;
+			padding: 60px 20px;
+			font-family: 'Segoe UI', sans-serif;
+		}
+
+		#bio h1,
+		#bio h2,
+		#bio h3 {
+			color: #2e5606;
+		}
+
+		.card {
+			background-color: #eff3f3;
+			padding: 20px;
+			margin: 15px 0;
+			border-radius: 12px;
+			box-shadow: 0 0 10px rgba(180, 255, 0, 0.1);
+		}
+
+		.date {
+			font-size: 0.85em;
+			color: #6b6565;
+			margin-bottom: 5px;
+		}
+
+		#domains {
+			background-color: #f9f9f9;
+			color: #1e1e1e;
+			padding: 60px 20px;
+			font-family: 'Segoe UI', sans-serif;
+			text-align: center;
+		}
+
+		#domains h2 {
+			color: #333333;
+			font-size: 2em;
+		}
+
+		.domain-cards {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 30px;
+			margin-top: 40px;
+		}
+
+		.domain-card {
+			background-color: #ffffff;
+			width: 250px;
+			padding: 25px;
+			border-radius: 15px;
+			border: 1px solid #ddd;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		.domain-card:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+		}
+
+		.domain-card img {
+			width: 60px;
+			margin-bottom: 15px;
+			filter: grayscale(0.2) brightness(1.1);
+		}
+
+		.domain-card h3 {
+			color: #444444;
+			font-size: 1.1em;
+		}
+
+		.domain-card {
+			opacity: 0;
+			transform: translateY(20px);
+			transition: opacity 0.6s ease, transform 0.6s ease;
+		}
+
+		.domain-card.visible {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		#skillhub {
+			margin-top: 60px;
+			padding: 60px 20px;
+			margin-bottom: 100px;
+		}
+
+	</style>
+</head>
+
+<body class="is-preload home-bg" style="background-color: #2b2b48; /* Twilight navy */
+  color: #4b4848;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;">
+	<!-- Navigation Menu Bar -->
+	<nav id="main-menu"
+		style="width:100%;background:rgba(25, 24, 24, 0.85);padding:1em 0;position:fixed;top:0;left:0;z-index:100;">
+		<ul style="display:flex;justify-content:center;gap:2em;list-style:none;margin:0;padding:0;">
+			<li><a href="#header" style="color:#fff;font-weight:bold;text-decoration:none;">Home</a></li>
+			<li><a href="#about" style="color:#fff;font-weight:bold;text-decoration:none;">About Me</a></li>
+			<li><a href="#skillhub" style="color:#fff;font-weight:bold;text-decoration:none;">Skill Hub</a></li>
+			<li><a href="#bio" style="color:#fff;font-weight:bold;text-decoration:none;">Bio</a></li>
+		</ul>
+	</nav>
+	<!-- Spacer to prevent content hiding under fixed menu -->
+	<div style="height:70px;"></div>
+
+	<!-- Header Section -->
+	<section id="header">
+		<div class="inner" style="text-align:center;max-width:800px;margin:0 auto;padding:2em 1em;">
+			<h1 style="font: 4em sans-serif;">Hello, <br>I'm Aditi Desai<br></h1>
+			<p>
+				Welcome to my Portfolio
+			</p>
+			<ul class="actions special">
+				<li><a href="#about" class="button scrolly">About Me</a></li>
+			</ul>
+		</div>
+	</section>
+
+
+	<!-- About Me -->
+	<section id="about" class="main style1">
+		<div class="container">
+			<header class="major">
+				<h1><strong>About Me</strong></h1>
+			</header>
+			<div class="row gtr-150" style="align-items: center;">
+				<div class="col-8 col-12-medium">
+					<p>
+						<strong>
+
+							<head style="font-size: 1.5em;box-shadow: #fff;">'Machines learn patterns. I seek meaning'
+							</head>
+						</strong>
+						<br>
+						I am a B.E. graduate in Artificial Intelligence and Data Science with a passion for transforming
+						ideas into purposeful AI solutions. My academic journey has sparked a deep interest in the
+						intersection of Data Analytics, Machine Learning, and Generative AI, inspiring me to explore how
+						intelligent systems can create real-world impact.
+
+						Currently, I am upskilling through the Google Data Analytics Professional Certificate, gaining
+						hands-on experience in SQL, Excel, Power BI, and Python (pandas, matplotlib) to strengthen my
+						analytical foundation. Alongside structured analytics, I’ve worked on projects involving machine
+						learning, NLP, and ethical AI, including the development of a Neurospiritual AI assistant and a
+						stress prediction system.
+
+						I’m now actively seeking roles or collaborative opportunities where I can contribute to
+						data-driven innovation, apply my technical skills to solve meaningful problems, and grow as a
+						responsible practitioner in the evolving AI landscape.
+					</p>
+					<a href="https://drive.google.com/file/d/1b9W58rjeL-kryBb5PY7alHAhtexbNTbK/view?usp=sharing"
+						target="_parent" class="resume-btn">View
+						Resume</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Skill Hub Section -->
+	<section id="skillhub" class="main style1 special" style="padding-top: 60px;">
+		<div class="container">
+			<header class="major">
+				<h1><strong>Skill Hub</strong></h1>
+			</header>
+			<!-- Submenu Tabs -->
+			<div id="skillhub-tabs"
+				style="display:flex;justify-content:center ;align-items: center;gap:1em;margin-bottom:2em;">
+				<button class="skillhub-tab active" onclick="showSkillHubTab('projects')">Projects</button>
+				<button class="skillhub-tab" onclick="showSkillHubTab('certifications')">Certifications</button>
+				<button class="skillhub-tab" onclick="showSkillHubTab('publications')">Publications</button>
+			</div>
+			<!-- Tab Contents -->
+			<div id="skillhub-content">
+				<!-- Projects Tab (default) -->
+				<div class="skillhub-panel" id="skillhub-projects">
+					<div class="row gtr-150">
+						<div class="col-4 col-12-medium">
+							<span class="image fit"><img src="stress_api.png" alt="Stress Analysis API Project"
+									style="border-radius: 10px;" /></span>
+							<h2>Stress Analysis API</h2>
+							<h4><strong>(B.E. PROJECT)</strong></h4>
+							<p>
+								Designed and developed a full-stack web application using ASP.NET Core MVC and ML.NET,
+								achieving 91% accuracy for stress level prediction based on age, gender, profession,
+								sleep patterns, and emotional indicators.<br>
+								Integrated ML.NET models for real-time prediction, dynamic stress management
+								recommendations, and automated doctor consultation triggers.<br>
+								Built modular service classes to ensure scalable, maintainable codebase and efficient
+								model updates.
+							</p>
+						</div>
+						<div class="col-4 col-12-medium">
+							<span class="image fit"><img src="twitter_sentiment.jpg"
+									alt="Twitter Sentiment Analysis Project" style="border-radius: 10px;" /></span>
+							<h2>Twitter Sentiment Analysis</h2>
+							<p>
+								Collected and processed Twitter data using Python (Pandas) and Excel to classify tweets
+								into positive, negative, and neutral sentiment categories.<br>
+								Visualized sentiment distribution using Tableau pie and bar charts to reveal trends and
+								insights.<br>
+								Applied calculated fields and table calculations in Tableau to show sentiment-wise
+								percentage contributions and facilitate clear dataset comparisons.
+							</p>
+						</div>
+						<div class="col-4 col-12-medium">
+							<span class="image fit"><img src="neurospiritual_ai.png" alt="Neurospiritual AI Project"
+									style="border-radius: 10px;" /></span>
+							<h2>Neurospiritual AI</h2>
+							<h4><strong>(Accepted at BTKS 2025)</strong></h4>
+							<p>
+								Developed an AI-based semantic search tool that recommends Bhagavad Gita shlokas for
+								user-provided situations and emotional states.<br>
+								Applied Mistral LLM and SentenceTransformer embeddings for NLP-driven matching of user
+								queries with relevant shlokas.<br>
+								Implemented FAISS vector indexing for fast and scalable similarity search across large
+								shloka datasets.<br>
+								Designed RESTful APIs to deliver real-time query results and dynamic shloka
+								recommendations.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="skillhub-panel" id="skillhub-certifications" style="display:none;">
+					<div class="row gtr-150 certification-grid">
+						<!-- Card 1 -->
+						<div class="col-4 col-12-medium certification-card">
+							<span class="image fit">
+								<img src="ML_certificate.png" alt="ML Certification" />
+							</span>
+							<h3>IBM Certificate of Machine Learning with Python | Coursera</h3>
+							<p>July 2023</p>
+						</div>
+
+						<!-- Card 2 -->
+						<div class="col-4 col-12-medium certification-card">
+							<span class="image fit">
+								<img src="Python_Hackerrank_certificate.png" alt="Python HackerRank Certificate" />
+							</span>
+							<h3>Python Certificate | HackerRank</h3>
+							<p>April 2024</p>
+						</div>
+
+						<!-- Card 3 -->
+						<div class="col-4 col-12-medium certification-card">
+							<span class="image fit">
+								<img src="BI_certificate.png" alt="BI Certificate" />
+							</span>
+							<h3>Introduction to Business Intelligence | Infosys Springboard</h3>
+							<p>August 2024</p>
+						</div>
+					</div>
+				</div>
+
+
+
+				<!-- Publications Tab -->
+				<div class="skillhub-panel" id="skillhub-publications" style="display: none;margin-bottom: 100px;">
+					<div class="row gtr-150" style="justify-content: center;">
+						<div class="col-6 col-12-medium"
+							style="text-align: center; background-color: #ececf5; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+
+							<!-- Logo -->
+							<span class="image fit" style="display: block; max-width: 180px; margin: 0 auto 20px auto;">
+								<img src="btks_logo.png" alt="BTKS Conference Logo"
+									style="width: 100%; border-radius: 12px;" />
+							</span>
+
+							<!-- Title -->
+							<h2 style="font-size: 1.4em; color: #060606; margin-bottom: 10px;">
+								Emotion-Aware Spiritual Guidance System Using the Bhagavad Gita: Design and Development
+								of Neurospiritual AI
+							</h2>
+
+							<!-- Acceptance -->
+							<p style="color: #5b6354; font-weight: bold;">
+								Accepted for Presentation at BTKS 2025
+							</p>
+
+						</div>
+					</div>
+				</div>
+
+				<!-- Bio Section -->
+				<section id="bio" class="main style1">
+					<div class="container">
+						<header class="major">
+							<h1><strong>BIO</strong></h1>
+						</header>
+						<div class="row">
+							<!-- Education -->
+							<div class="col-6 col-12-medium">
+								<h2>Education</h2>
+								<div class="card">
+									<p class="date"> August 2021 – Present</p>
+									<h3>B.E. Artificial Intelligence & Data Science</h3>
+									<p>Dr. D.Y. Patil College of Engineering, Pune<br>CGPA: 8.99 / 10</p>
+								</div>
+								<div class="card">
+									<p class="date">June 2019 – June 2021</p>
+									<h3>HSC (PCM)</h3>
+									<p>D.Y. Patil Jr. College, Pune<br>Score: 95%</p>
+								</div>
+								<div class="card">
+									<p class="date">June 2019 – June 2021</p>
+									<h3>CBSE (10th)</h3>
+									<p>S.N.B.P. International School, Pune<br>Score: 94.4%</p>
+								</div>
+							</div>
+
+							<!-- Work Experience -->
+							<div class="col-6 col-12-medium">
+								<h2>Work Experience</h2>
+								<div class="card">
+									<p class="date">Nov 2024 – May 2025</p>
+									<h3>Technical Trainee – Worldline</h3>
+									<p>Developed full-stack modules, integrated CI/CD, and used SonarQube with GitLab +
+										Jenkins.</p>
+								</div>
+								<div class="card">
+									<p class="date">Apr 2024 – Jul 2024</p>
+									<h3>Data Science Intern – DataAvengers</h3>
+									<p>Built ML models using Python, NLP libraries. EDA and cleaning with Excel and SQL.
+									</p>
+								</div>
+								<div class="card">
+									<p class="date">Jun 2023 – Oct 2023</p>
+									<h3>AI Ethics Intern – Z-Inspection</h3>
+									<p>Contributed ethical research for AI in healthcare and smart cities.</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+
+			</div>
+		</div>
+	</section>
+	<!-- Domains Section-->
+	<section id="domains" class="main style1">
+		<div class="container">
+			<header class="major">
+				<h2><strong>Domains</strong> I work with</h2>
+			</header>
+			<div class="domain-cards">
+				<div class="domain-card">
+					<img src="https://img.icons8.com/ios/100/artificial-intelligence.png" alt="ML">
+					<h3>Machine Learning & NLP</h3>
+				</div>
+				<div class="domain-card">
+					<img src="https://img.icons8.com/ios/100/code.png" alt="Full Stack">
+					<h3>Full-Stack Web Development</h3>
+				</div>
+				<div class="domain-card">
+					<img src="https://img.icons8.com/ios/100/robot-2--v1.png" alt="LLM">
+					<h3>LLM & Generative AI</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Footer -->
+	<section id="footer">
+		<ul class="icons">
+			<li><a href="mailto:aditidesai892@gmail.com" class="icon solid alt fa-envelope"><span
+						class="label">Email</span></a></li>
+			<li><a href="https://www.linkedin.com/in/aditi-desai-588107239/" class="icon brands alt fa-linkedin"><span
+						class="label">LinkedIn</span></a></li>
+			<li><a href="https://github.com/githubcodingjoiner" class="icon brands alt fa-github"><span
+						class="label">GitHub</span></a></li>
+		</ul>
+	</section>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script>
+		function showSkillHubTab(tab) {
+			// Remove active from all tabs
+			document.querySelectorAll('.skillhub-tab').forEach(btn => btn.classList.remove('active'));
+			// Hide all panels
+			document.querySelectorAll('.skillhub-panel').forEach(panel => panel.style.display = 'none');
+			// Show selected panel
+			document.getElementById('skillhub-' + tab).style.display = '';
+			// Set active tab
+			if (tab === 'projects') document.querySelectorAll('.skillhub-tab')[0].classList.add('active');
+			if (tab === 'certifications') document.querySelectorAll('.skillhub-tab')[1].classList.add('active');
+			if (tab === 'publications') document.querySelectorAll('.skillhub-tab')[2].classList.add('active');
+		}
+
+		const observer = new IntersectionObserver(entries => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('visible');
+				}
+			});
+		});
+
+		document.querySelectorAll('.domain-card').forEach(card => {
+			observer.observe(card);
+		});
+
+
+	</script>
+
+</body>
+
+</html>
